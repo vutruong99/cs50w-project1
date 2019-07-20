@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Book
+{% endblock %}
+
+{% block body %}
+    <h1>Book details</h1>
+
+    <ul class="bookInfo">
+        <li>ISBN: {{ book[0]['isbn'] }}</li>
+        <li>Title: {{ book[0]['title']}}</li>
+        <li>Author: {{ book[0]['author']}}</li>
+        <li>Year: {{book[0]['year']}}</li>
+        <li>AVG rating {{ goodreads['books'][0]['average_rating'] }}</li>
+        <li>Rating count {{ goodreads['books'][0]['ratings_count']}}</li>
+    </ul>
+
+
+    <form id="review-form" action="{{url_for('book',isbn=book[0]['isbn'])}}" method="post">
+      <div class="container">
+          <div class="form-group">
+            <textarea  name = "review" class="form-control" id="exampleFormControlTextarea1" rows="5" cols="100"></textarea>
+          </div>
+      </div>
+
+        <select class="form-control" id="exampleFormControlSelect1" name="rating">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      <div class="text-center">
+        <button class="btn btn-dark " name="button">Submit</button>
+      </div>
+    </form>
+
+    <ul>
+      {% for review in reviews %}
+      <li>User {{review.username}} reviewed</li>
+      <p>{{review.review}}, {{review.rating}} stars</p>
+      {% endfor %}
+    </ul>
+
+
+
+{% endblock %}

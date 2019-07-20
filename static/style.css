@@ -1,0 +1,85 @@
+.col-lg-3, .col-md-6 {
+  margin: 0 auto;
+}
+
+nav {
+  background-color: black;
+}
+
+.table, .table-dark {
+  margin-top:15px;
+}
+
+select {
+ max-width: 60px;
+ margin: 0 auto;
+}
+
+body {
+  background-image: url("book2.jpg");
+  width: 100%;
+  height: calc(100vh);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #292b2c;
+}
+h1, h2 {
+  text-align: center;
+  color:green;
+  margin: 15px auto;
+  text-shadow: 2px 2px 8px black;
+    font-family: 'DM Sans', sans-serif;
+  font-weight: 100;
+  color:white;
+}
+
+.btn, .btn-primary {
+  margin-top:15px;
+  margin-bottom: 0px;
+}
+
+.btn, .btn-dark {
+  margin-top:15px;
+  margin-bottom: 0px;
+}
+
+ul {
+  list-style: none;
+}
+
+p, li {
+  text-align: center;
+  color:green;
+  margin: 15px auto;
+  text-shadow: 2px 2px 8px black;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 100;
+  color:white;
+}
+
+.table .table-dark {
+  font-size: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: lightgrey;
+}
+
+.table > tbody > tr > td {
+     vertical-align: middle;
+}
+.background {
+  background-image: url("book2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: calc(100vh - 54px);
+    background-position: center;
+}
